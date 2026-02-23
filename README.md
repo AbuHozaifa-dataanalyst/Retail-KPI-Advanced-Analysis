@@ -1,4 +1,5 @@
 Retail KPI Advanced Performance Analysis
+
 📌 Project Overview
 
 This project analyzes 6 months of retail performance using key retail KPIs to diagnose revenue movement and business health.
@@ -51,3 +52,4 @@ Business Insight & Scenario Modeling
 
 
 Focus on conversion improvement strategies (staff training, upselling techniques) as ROI is higher than increasing traffic spend.
+
