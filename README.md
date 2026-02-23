@@ -1,55 +1,36 @@
-Retail KPI Advanced Performance Analysis
-
+Retail KPI Performance Analysis
 📌 Project Overview
 
-This project analyzes 6 months of retail performance using key retail KPIs to diagnose revenue movement and business health.
+This project analyzes 6 months of retail data to understand sales performance using core KPIs including Traffic, Conversion Rate, and Average Basket Value.
 
-The analysis includes:
-
-Traffic
-
-Conversion Rate
-
-Average Basket Value
-
-Retention Rate
-
-Category Contribution
-
-Revenue Scenario Simulation
-
-📊 Core KPI Formulas
+📊 KPIs Used
 
 Conversion Rate = Transactions / Traffic
 
 Sales = Transactions × Average Basket Value
 
-Retention Rate = Returning Customers / Total Customers
+Growth % = Month-over-Month Revenue Change
 
-Category Contribution = Category Sales / Total Sales
+🔍 Key Insights
 
-🔎 Key Insights
+Conversion decline led to Q1 sales drop.
 
-Sales volatility was primarily driven by conversion fluctuations.
+Traffic growth in Q2 drove revenue recovery.
 
-Retention rate improved, strengthening long-term stability.
+Basket value increase helped offset weak conversion.
 
-Electronics category became dominant revenue driver.
+June recorded highest sales performance.
 
-Grocery category contribution declined over time.
-
-A 2% conversion improvement increases monthly revenue significantly without additional traffic cost.
+Sales volatility is mainly driven by conversion instability.
 
 📈 Tools Used
 
 Excel
 
-KPI Decomposition Analysis
+KPI decomposition
 
-Business Insight & Scenario Modeling
+Business storytelling
 
-🎯 Business Recommendation
+🎯 Business Impact
 
-
-Focus on conversion improvement strategies (staff training, upselling techniques) as ROI is higher than increasing traffic spend.
-
+This analysis demonstrates how sales performance can be diagnosed by breaking revenue into core retail drivers.
