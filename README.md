@@ -1,143 +1,263 @@
-# Retail KPI Advanced Performance Analysis
+# 🛍️ Retail KPI Advanced Analysis
+
+> End-to-end retail analytics project covering KPI modeling, dashboard development, and strategic scenario simulation.
+
+---
 
 ## 📌 Project Overview
 
-This project presents a comprehensive Retail KPI diagnostic analysis using 6 months of performance data.  
-The objective is to break down revenue movement into its core drivers and generate actionable business insights.
+This project demonstrates advanced retail performance analysis using transaction-level data. It combines:
 
-The analysis focuses on understanding:
+* Data cleaning & transformation
+* KPI framework design
+* Power BI dashboard development
+* Conversion & pricing scenario simulations
+* Executive-level business insights
 
-- Traffic performance
-- Conversion rate behavior
-- Average basket value trends
-- Customer retention
-- Product category contribution
-- Revenue scenario simulation
-
-This project demonstrates business-oriented retail analytics, not just data calculations.
+The objective is to simulate how a modern retail analytics team would evaluate revenue, profitability, marketing efficiency, and customer performance.
 
 ---
 
-## 📊 Dataset Description
-
-The dataset includes the following key variables:
-
-- Month
-- Traffic (store visitors)
-- Transactions
-- Average Basket Value
-- Sales Revenue
-- Returning Customers
-- Category-level Sales (Electronics, Clothing, Grocery)
-
----
-
-## 📐 Core KPI Formulas
-
-**1️⃣ Conversion Rate**
-Conversion Rate = Transactions / Traffic
-
-**2️⃣ Sales Revenue**
-Sales = Transactions × Average Basket Value
-
-**3️⃣ Retention Rate**
-Retention Rate = Returning Customers / Total Customers
-
-**4️⃣ Category Contribution**
-Category Contribution % = Category Sales / Total Sales
-
-**5️⃣ Month-over-Month Growth**
-Growth % = (Current Month Sales - Previous Month Sales) / Previous Month Sales
-
----
-
-## 🔍 Performance Analysis Summary
-
-### Revenue Trend
-Sales experienced volatility in early months due to declining conversion rate, followed by recovery driven by traffic growth and improved transaction volume.
-
-### Conversion Behavior
-Conversion instability was identified as the primary driver of revenue fluctuations.
-
-### Retention Analysis
-Retention rate improved steadily across the period, indicating stronger customer loyalty and improving long-term business sustainability.
-
-### Category Contribution
-- Electronics emerged as the dominant revenue driver.
-- Grocery contribution gradually declined.
-- Increasing dependency on a single category introduces strategic risk.
-
----
-
-## 📈 Scenario Simulation – Conversion Improvement
-
-A revenue simulation was performed to evaluate the financial impact of a 2% increase in conversion rate.
-
-Result:
-A +2% conversion increase generates significant additional monthly revenue without increasing marketing spend.
-
-Business Insight:
-Improving operational efficiency and in-store experience may deliver higher ROI compared to investing solely in traffic acquisition.
-
----
-
-## 💡 Key Business Insights
-
-- Revenue volatility is primarily conversion-driven.
-- Basket value increases helped offset conversion weakness.
-- Retention growth supports long-term revenue stability.
-- Electronics category expansion fueled overall revenue growth.
-- Conversion optimization represents the highest immediate revenue opportunity.
-
----
-
-## 🛠 Tools Used
-
-- Microsoft Excel
-- KPI Decomposition Analysis
-- Retail Performance Diagnostics
-- Scenario-Based Revenue Modeling
-
----
-
-## 🎯 Business Recommendations
-
-- Improve sales staff training to stabilize conversion.
-- Implement upselling strategies to protect basket value.
-- Diversify category revenue to reduce dependency risk.
-- Focus on retention programs to strengthen recurring revenue.
-- Prioritize operational improvements over traffic-only growth strategies.
-
----
-
-## 📎 Project Structure
+## 🗂 Project Structure
 
 ```
 Retail-KPI-Advanced-Analysis/
 │
 ├── data/
+│   ├── raw_retail_data.csv
+│   ├── cleaned_retail_data.csv
+│   └── data_dictionary.md
+│
 ├── dashboard/
+│   ├── retail_kpi_dashboard.pbix
+│   ├── dashboard_mockup.png
+│   └── measures_documentation.md
+│
 ├── scenario/
+│   ├── conversion_simulation.xlsx
+│   ├── pricing_sensitivity_model.xlsx
+│   └── scenario_assumptions.md
+│
 ├── insights.pdf
 └── README.md
 ```
 
 ---
 
-## 🚀 Project Objective
+## 📊 Dataset Description
 
-This project demonstrates the ability to:
+The dataset contains transaction-level retail data.
 
-- Break revenue into core retail drivers
-- Interpret KPI interactions
-- Perform customer behavior analysis
-- Identify category-level risks
-- Conduct revenue impact simulations
-- Translate data into business strategy
+### 🔹 Core Fields
+
+* Order_ID
+* Order_Date
+* Customer_ID
+* Region
+* Channel (Online / In-Store)
+* Product_Category
+* Product_Subcategory
+* Units_Sold
+* Unit_Price
+* Discount (%)
+* Revenue
+* Cost
+* Profit
+* Marketing_Spend
+* Conversion_Rate
+* Customer_Segment
+
+### 🔹 Derived Metrics (Data Modeling Layer)
+
+* **Net Revenue** = Units_Sold × Unit_Price × (1 - Discount)
+* **Gross Profit** = Net Revenue - Cost
+* **Profit Margin %**
+* **Average Order Value (AOV)**
+* **Customer Lifetime Value (CLV - proxy model)**
+
+Cleaned dataset available in:
+
+```
+data/cleaned_retail_data.csv
+```
 
 ---
 
-## 📌 Author Abu Hozaifa
+## 📈 KPI Framework
 
-Retail Analytics Portfolio Project  
-Focused on KPI-driven performance diagnostics and business insight generation.
+### 1️⃣ Revenue KPIs
+
+* Total Revenue
+* Revenue Growth % (MoM / YoY)
+* Revenue by Region
+* Revenue by Channel
+* Revenue by Category
+
+### 2️⃣ Profitability KPIs
+
+* Gross Profit
+* Net Profit
+* Profit Margin %
+* Contribution Margin
+
+### 3️⃣ Sales & Conversion KPIs
+
+* Conversion Rate
+* Units per Transaction
+* Average Order Value (AOV)
+* Incremental Revenue from Conversion Uplift
+
+### 4️⃣ Marketing Efficiency KPIs
+
+* Marketing Spend
+* Revenue per Marketing Dollar
+* Customer Acquisition Cost (Estimated)
+* Return on Marketing Investment (ROMI)
+
+### 5️⃣ Customer KPIs
+
+* Active Customers
+* Repeat Purchase Rate
+* Revenue by Segment
+* Estimated CLV
+
+---
+
+## 📊 Power BI Dashboard
+
+File:
+
+```
+dashboard/retail_kpi_dashboard.pbix
+```
+
+### Dashboard Pages
+
+### 🔹 Executive Overview
+
+* KPI Cards (Revenue, Profit, Margin, Conversion)
+* Monthly revenue trend
+* Regional performance breakdown
+
+### 🔹 Sales Performance
+
+* Category & subcategory contribution
+* Channel comparison (Online vs In-Store)
+* Discount impact on margin
+
+### 🔹 Customer Analytics
+
+* Segment performance
+* AOV by segment
+* Repeat vs New customer behavior
+
+### 🔹 Marketing Performance
+
+* Marketing Spend vs Revenue
+* ROMI trend
+* Conversion rate analysis
+
+---
+
+## 🧮 Scenario Modeling
+
+### 📌 1. Conversion Simulation
+
+File:
+
+```
+scenario/conversion_simulation.xlsx
+```
+
+**Purpose:**
+Simulate the financial impact of improving conversion rate.
+
+**Inputs:**
+
+* Website Traffic
+* Baseline Conversion Rate
+* Improved Conversion Rate (+1%, +2%, +5%)
+* Average Order Value
+* Profit Margin
+
+**Core Logic:**
+
+```
+Orders = Traffic × Conversion Rate
+Revenue = Orders × AOV
+Profit = Revenue × Profit Margin
+```
+
+**Outputs:**
+
+* Incremental Orders
+* Incremental Revenue
+* Incremental Profit
+* % Revenue Uplift
+
+---
+
+### 📌 2. Pricing Sensitivity Model
+
+File:
+
+```
+scenario/pricing_sensitivity_model.xlsx
+```
+
+Evaluates the impact of:
+
+* ±5% Price Changes
+* Discount Adjustments
+* Volume Elasticity Assumptions
+
+Scenarios included:
+
+* Base Case
+* Price Increase
+* Price Decrease
+* High Discount Campaign
+
+---
+
+## 📄 Key Insights (Executive Summary)
+
+* Online channel is the primary revenue growth driver.
+* High discounting increases revenue but significantly compresses margins.
+* A small improvement in conversion rate creates strong profit leverage.
+* Marketing efficiency varies by region and segment.
+* High-volume categories are not always high-margin categories.
+
+Full report available in:
+
+```
+insights.pdf
+```
+
+---
+
+## 🛠 Tools & Skills Demonstrated
+
+* Data Cleaning & Transformation
+* KPI Framework Design
+* Power BI Dashboard Development
+* DAX Measures & Data Modeling
+* Scenario & Financial Simulation
+* Business Insight Generation
+
+---
+
+## 🚀 How to Use
+
+1. Open `cleaned_retail_data.csv` to explore the dataset
+2. Launch the Power BI dashboard file
+3. Test strategic decisions using scenario Excel models
+4. Review insights.pdf for executive-level summary
+
+---
+
+## 💼 Resume-Ready Project Description
+
+**Retail KPI Advanced Analytics Project**
+Designed and built an end-to-end retail analytics solution including KPI modeling, Power BI dashboard development, and financial scenario simulations. Analyzed revenue drivers, marketing efficiency, pricing sensitivity, and conversion optimization to deliver strategic business recommendations.
+
